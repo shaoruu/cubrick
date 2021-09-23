@@ -1,0 +1,24 @@
+[package]
+authors = ["iantheearl <ian1314159@gmail.com>"]
+edition = "2018"
+name = "cubrick"
+version = "0.1.0"
+
+[workspace]
+members = ["server/*"]
+
+[[bin]]
+name = "main"
+path = "server/main.rs"
+
+[dependencies]
+actix = "0.10.0"
+actix-cors = "0.5.4"
+actix-files = "0.5.0"
+actix-web = "3.0.0"
+chrono = "0.4.19"
+fern = {version = "0.6.0", features = ["colored"]}
+log = "0.4"
+
+[profile.release]
+debug = true
